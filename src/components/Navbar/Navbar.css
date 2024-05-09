@@ -1,0 +1,99 @@
+.app__navbar{
+    width: 100%;
+    /* height: 6rem; */
+    display: flex;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-black)
+}
+.app__navbar-logo img{
+    width: 150px;
+    justify-content: flex-start;
+}
+.app__navbar-links{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    align-items: center;
+    /* padding-left: 10rem; */
+}
+.app__navbar-links li:hover{
+    color: var(--color-grey);
+    transition: color 0.3s ease;
+}
+.app__navbar-login{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+}
+.app__navbar-login a{
+    margin: 0 1rem;
+    text-decoration: none;
+    border-bottom: 0;
+}
+.app__navbar-login a:hover{
+    border-bottom: 2px solid var(--color-golden);
+    transition: border-bottom 0.5s ease;
+}
+.app__navbar-login div{
+    width: 1px;
+    height: 30px;
+    background-color: var(--color-golden);
+}
+
+.app__navbar-sm {
+    display: none;
+}
+.app__navbar-sm-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-black);
+    color: var(--color-golden);
+    flex-direction: column;
+    transition: 0.5 ease;
+    z-index: 5;
+}
+.hamburger, .forkicon{
+    font-size: 27px;
+    color: var(--color-golden);
+    position: fixed;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+}
+.app__navbar-smlinks {
+    list-style-type: none;
+}
+.app__navbar-smlinks li{
+    padding: .5rem;
+    color: var(--color-golden);
+    font-family: var(--font-base);
+    text-align: center;
+    font-size: 1.5rem;
+}
+.app__navbar-smlinks li:hover{
+    color: var(--color-white);
+}
+@media screen and (max-width: 1150px) {
+    .app__navbar-links{
+        display: none;
+    }
+    .app__navbar-sm{
+        display: flex;
+    }
+}
+@media screen and (max-width: 650px){
+    .app__navbar-login {
+        display: none;
+    }
+    .app__navbar-logo img{
+        width: 120px;
+    }
+    
+}

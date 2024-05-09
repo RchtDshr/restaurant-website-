@@ -1,0 +1,126 @@
+.app__gallery{
+    background-color: var(--color-black);
+    flex-direction: row;
+    padding: 3rem 0 3rem 6rem;
+    /* padding: 6rem;
+    padding-right: 0; */
+    gap: 2rem;
+    border: 1px solid var(--color-white);
+    border-left: 0;
+    border-right: 0;
+}
+.app__gallery-content{
+    /* margin: 0 5rem ; */
+    /* margin-left: 6rem; */
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.app__gallery-content p{
+    /* margin-top: 0.7rem; */
+    /* margin-right: 2.5rem; */
+}
+.app__gallery-images{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    max-width: 50%;
+    position: relative;
+    
+}
+.app__gallery-images_container{
+    display: flex;
+    gap: 2.5rem;
+    flex-direction: row;
+    width: max-content;
+    overflow-x: scroll;
+
+}
+.app__gallery-images_container::-webkit-scrollbar{
+    display: none;
+}
+.instagram{
+    position: absolute;
+    transition: 0.5s ease;
+    cursor: pointer;
+    opacity: 0;
+    color: var(--color-white);
+    font-size: 2rem;
+}
+.app__gallery-images_card{
+    position: relative;
+    min-width: 25vw;
+    height: 70vh;
+}
+.app__gallery-images_card:hover img{
+    opacity: 0.35;
+}
+.app__gallery-images_card:hover .instagram{
+    opacity: 0.8;
+}
+.app__gallery-images_card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: 0.5s ease;
+}
+.app_gallery-images_arrow{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 5%;
+    padding: 0 1rem;
+    opacity: 0.9;
+}
+.galler-icon{
+    /* position: absolute; */
+    background-color: var(--color-black);
+    border-radius: 20%;
+    color: var(--color-golden);
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.galler-icon:hover{
+    color: var(--color-white);
+}
+
+@media screen and (max-width:1150px) {
+    .app__gallery{
+        flex-direction: column;
+    }
+    .app__gallery-content{
+        min-width: 45%;
+    }
+    .app__gallery{
+        padding: 5rem;
+        padding-right: 0;
+    }
+    .app__gallery-content{
+        padding-right: 2rem;
+    }
+    .app__gallery-images{
+        max-width: 100%;
+    }
+    .app__gallery-images_card{
+        position: relative;
+        min-width: 50vw;
+        height: 65vh;
+    }
+}
+@media screen and (max-width:650px) {
+    .app__gallery{
+        padding: 3rem;
+        padding-right: 0;
+    }
+    .app__gallery-images_card{
+        position: relative;
+        min-width: 50vw;
+        height: 35vh;
+    }
+}
